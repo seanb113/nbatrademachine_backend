@@ -1,0 +1,76 @@
+  [1m[35m (5355.6ms)[0m  [1m[35mCREATE DATABASE "nbatrademachine_backend_development" ENCODING = 'unicode'[0m
+  [1m[35m (296.0ms)[0m  [1m[35mCREATE DATABASE "nbatrademachine_backend_test" ENCODING = 'unicode'[0m
+  [1m[35m (5029.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (252.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (177.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4726941969609142920)[0m
+  [1m[35m (98.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTeams (20200310180945)
+  [1m[35m (200.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (890.7ms)[0m  [1m[35mCREATE TABLE "teams" ("id" bigserial primary key, "name" character varying, "cap_space" character varying, "taxed" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (421.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200310180945"]]
+  [1m[35m (45.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20200310181019)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (243.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "team" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200310181019"]]
+  [1m[35m (114.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePlayers (20200310182127)
+  [1m[35m (29.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (388.8ms)[0m  [1m[35mCREATE TABLE "players" ("id" bigserial primary key, "name" character varying, "team" character varying, "year_signed" character varying, "signed_using" character varying, "trade_clause" character varying, "trade_kicker" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200310182127"]]
+  [1m[35m (45.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTrades (20200310182403)
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4726941969609142920)[0m
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4726941969609142920)[0m
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTrades (20200310182403)
+  [1m[35m (22.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (445.7ms)[0m  [1m[35mCREATE TABLE "trades" ("id" bigserial primary key, "user_id" bigint NOT NULL, "swaps" text, "new_caps" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_12b0ea7696"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (99.3ms)[0m  [1m[35mCREATE  INDEX  "index_trades_on_user_id" ON "trades"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200310182403"]]
+  [1m[35m (34.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSwaps (20200310182431)
+  [1m[35m (25.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (105.3ms)[0m  [1m[35mCREATE TABLE "swaps" ("id" bigserial primary key, "trade_id" bigint NOT NULL, "player_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_53dae7e261"
+FOREIGN KEY ("trade_id")
+  REFERENCES "trades" ("id")
+, CONSTRAINT "fk_rails_b6ebd3d8c1"
+FOREIGN KEY ("player_id")
+  REFERENCES "players" ("id")
+)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_swaps_on_trade_id" ON "swaps"  ("trade_id")[0m
+  [1m[35m (36.6ms)[0m  [1m[35mCREATE  INDEX  "index_swaps_on_player_id" ON "swaps"  ("player_id")[0m
+  [1m[36mprimary::SchemaMigration Create (29.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200310182431"]]
+  [1m[35m (44.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTeamToSwap (20200310182614)
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (100.2ms)[0m  [1m[35mALTER TABLE "swaps" ADD "team_id" bigint NOT NULL[0m
+  [1m[35m (33.1ms)[0m  [1m[35mCREATE  INDEX  "index_swaps_on_team_id" ON "swaps"  ("team_id")[0m
+  [1m[35m (190.6ms)[0m  [1m[35mALTER TABLE "swaps" ADD CONSTRAINT "fk_rails_fa1c9e320e"
+FOREIGN KEY ("team_id")
+  REFERENCES "teams" ("id")
+[0m
+  [1m[36mprimary::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200310182614"]]
+  [1m[35m (39.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVotes (20200310182651)
+  [1m[35m (8.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (49.1ms)[0m  [1m[35mCREATE TABLE "votes" ("id" bigserial primary key, "category" character varying, "user_id" bigint NOT NULL, "trade_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c9b3bef597"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_b50de22406"
+FOREIGN KEY ("trade_id")
+  REFERENCES "trades" ("id")
+)[0m
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE  INDEX  "index_votes_on_user_id" ON "votes"  ("user_id")[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE  INDEX  "index_votes_on_trade_id" ON "votes"  ("trade_id")[0m
+  [1m[36mprimary::SchemaMigration Create (3.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200310182651"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (9.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (45.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-10 18:34:08.176133"], ["updated_at", "2020-03-10 18:34:08.176133"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4726941969609142920)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
