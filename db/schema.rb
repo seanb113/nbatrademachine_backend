@@ -10,20 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_10_182651) do
+ActiveRecord::Schema.define(version: 2020_03_11_171430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "players", force: :cascade do |t|
     t.string "name"
-    t.string "team"
     t.string "year_signed"
     t.string "signed_using"
-    t.string "trade_clause"
-    t.string "trade_kicker"
+    t.boolean "trade_clause"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "position"
+    t.bigint "team_id", null: false
+    t.string "salary"
+    t.string "final_year_of_contract"
+    t.string "player_image"
+    t.index ["team_id"], name: "index_players_on_team_id"
   end
 
   create_table "swaps", force: :cascade do |t|
@@ -40,9 +44,10 @@ ActiveRecord::Schema.define(version: 2020_03_10_182651) do
   create_table "teams", force: :cascade do |t|
     t.string "name"
     t.string "cap_space"
-    t.string "taxed"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "logo"
+    t.string "cap_spent"
   end
 
   create_table "trades", force: :cascade do |t|
@@ -59,6 +64,7 @@ ActiveRecord::Schema.define(version: 2020_03_10_182651) do
     t.string "team"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password"
   end
 
   create_table "votes", force: :cascade do |t|
@@ -71,6 +77,7 @@ ActiveRecord::Schema.define(version: 2020_03_10_182651) do
     t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
+  add_foreign_key "players", "teams"
   add_foreign_key "swaps", "players"
   add_foreign_key "swaps", "teams"
   add_foreign_key "swaps", "trades"
