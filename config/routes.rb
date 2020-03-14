@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :players
   resources :teams
   resources :trades
+  post '/login', to: 'auth#create'
+  get 'trades/index'
   # get 'auth/create'
   # get 'swaps/create'
   # get 'votes/index'
@@ -12,7 +14,6 @@ Rails.application.routes.draw do
   # get 'users/index'
   # get 'users/create'
   # get 'users/show'
-  # get 'trades/index'
   # get 'trades/create'
   # post '/login', to: 'auth#create'
   # get '/profile', to: 'users#profile'

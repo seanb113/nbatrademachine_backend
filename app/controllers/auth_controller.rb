@@ -1,6 +1,6 @@
 class AuthController < ApplicationController
   def create
-    user = User.find_by(username: params[:username])
+    user = User.find_by(name: params[:name])
     if user && user.authenticate(params[:password])
       render json: {
         message: "Logged In",
@@ -10,7 +10,7 @@ class AuthController < ApplicationController
       }
     else
       render json: {
-        message: "Incorrect Username or Password",
+        message: "Incorrect Name or Password",
         successful: false
       }
     end
