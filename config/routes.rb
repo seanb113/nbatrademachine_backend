@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :players
   resources :teams
   resources :trades
+  resources :users
   post '/login', to: 'auth#create'
   get 'trades/index'
   # get 'auth/create'

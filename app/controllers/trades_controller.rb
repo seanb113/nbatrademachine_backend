@@ -11,9 +11,12 @@ class TradesController < ApplicationController
     user = User.find_by(id: params[:user]["id"])
     trade = Trade.create(user:user)
     # byebug
-    render json: trade
     swaps = params[:swap_attributes]
     create_swaps(swaps, trade)
+    render json: trade.to_json(
+      :include => {:swaps =>
+      {:except => [:created_at, :updated_at]}}
+      )
   end
 
   def create_swaps(swaps, trade)
