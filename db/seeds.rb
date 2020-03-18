@@ -2,9 +2,12 @@ require 'byebug'
 require 'date'
 require 'json'
 # require 'pry'
-# require 'mechanize'
+require 'mechanize'
+require 'json'
 Team.destroy_all
 Player.destroy_all
+# Trade.destroy_all
+# User.destroy_all
 # User.destroy_all
 # Trade.destroy_all
 team_array = [
@@ -1169,10 +1172,796 @@ laker_players =
         "signed_using": "Minimum",
         "final_year_of_contract": "2020",
         "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Paul Millsap",
+        "salary": "$30,350,000",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/2754.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Nikola Jokic",
+        "salary": "$27,504,630",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/15393.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Gary Harris",
+        "salary": "$17,839,286",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/15371.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Mason Plumlee",
+        "salary": "$14,041,096",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/13335.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Will Barton",
+        "salary": "$12,776,786",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/10865.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Jerami Grant",
+        "salary": "$9,346,153",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/15391.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Jamal Murray",
+        "salary": "$4,444,746",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20212.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "0202",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Michael Porter Jr.",
+        "salary": "$3,389,400",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/26980.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Torrey Craig",
+        "salary": "$2,000,000",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/24230.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Noah Vonleh",
+        "salary": "$2,000,000",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/15361.png",
+        "signed_using": "MLE",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Monte Morris",
+        "salary": "$1,588,231",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/23652.png",
+        "signed_using": "Mini MLE",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Keita Bates-Diop",
+        "salary": "$1,416,852",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/27014.png",
+        "signed_using": "MLE",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Vlatko Cancar",
+        "salary": "$898,310",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/23650.png",
+        "signed_using": "MLE",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Bol Bol",
+        "salary": "-",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/default-person.png",
+        "signed_using": "",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "P.J. Dozier",
+        "salary": "-",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/23668.png",
+        "signed_using": "",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Gerald Green",
+        "salary": "",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/6100.png",
+        "signed_using": "",
+        "final_year_of_contract": "",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Jarred Vanderbilt",
+        "salary": "$1,416,852",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/27007.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Luke Kennard",
+        "salary": "$3,827,160",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/23607.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Jordan McRae",
+        "salary": "$1,645,357",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/15410.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Shabazz Napier",
+        "salary": "$1,845,301",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/15376.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Evan Turner",
+        "salary": "$18,606,557",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/6883.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Juan Hernangomez",
+        "salary": "$3,321,030",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20220.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Malik Beasley",
+        "salary": "$2,731,714",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20224.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Clint Capela",
+        "salary": "$14,896,552",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/15377.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Nene Hilario",
+        "salary": "$10,000,000",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/6103.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Robert Covington",
+        "salary": "$11,301,219",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/13379.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Denver Nuggets",
+        "name": "Jordan Bell",
+        "salary": "",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/23633.png",
+        "signed_using": "",
+        "final_year_of_contract": "",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Paul George",
+        "salary": "$33,005,556",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/6892.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Kawhi Leonard",
+        "salary": "$32,742,000",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/8066.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Marcus Morris",
+        "salary": "$15,000,000",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/8065.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Patrick Beverley",
+        "salary": "$12,345,680",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/6297.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Louis Williams",
+        "salary": "$8,000,000",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/2657.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Ivica Zubac",
+        "salary": "$6,481,482",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20238.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Montrezl Harrell",
+        "salary": "$6,000,000",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/17860.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Rodney McGruder",
+        "salary": "$4,807,693",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/13575.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "JaMychal Green",
+        "salary": "$4,767,000",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/11666.png",
+        "signed_using": "Room",
+        "final_year_of_contract": "2021",
+        "trade_clause": true
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Landry Shamet",
+        "salary": "$1,995,120",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/26992.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Mfiondu Kabengele",
+        "salary": "$1,977,000",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31586.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Patrick Patterson",
+        "salary": "$1,620,564",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/6896.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Terance Mann",
+        "salary": "$1,000,000",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31607.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Reggie Jackson",
+        "salary": "$512,721",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/8075.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Joakim Noah",
+        "salary": "$91,557",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/2248.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "0",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Amir Coffey",
+        "salary": "-",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/default-person.png",
+        "signed_using": "",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Johnathan Motley",
+        "salary": "-",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/24020.png",
+        "signed_using": "",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Isaiah Thomas",
+        "salary": "",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/8111.png",
+        "signed_using": "",
+        "final_year_of_contract": "",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Maurice Harkless",
+        "salary": "$11,011,236",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/10823.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Jerome Robinson",
+        "salary": "$3,567,720",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/26979.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Los Angeles Clippers",
+        "name": "Issuf Sanon",
+        "salary": "",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/27010.png",
+        "signed_using": "",
+        "final_year_of_contract": "",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Kemba Walker",
+        "salary": "$32,742,000",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/8059.png",
+        "signed_using": "Sign And Trade",
+        "final_year_of_contract": "2024",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Gordon Hayward",
+        "salary": "$32,700,690",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/6891.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Marcus Smart",
+        "salary": "$12,553,471",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/15358.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Jayson Tatum",
+        "salary": "$7,830,000",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/23598.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Jaylen Brown",
+        "salary": "$6,534,829",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20208.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "0202",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Daniel Theis",
+        "salary": "$5,000,000",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/23828.png",
+        "signed_using": "Early Bird",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Enes Kanter",
+        "salary": "$4,767,000",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/8053.png",
+        "signed_using": "Room",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Romeo Langford",
+        "salary": "$3,458,400",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31571.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Vincent Poirier",
+        "salary": "$2,505,793",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31917.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Grant Williams",
+        "salary": "$2,379,840",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31579.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Robert Williams",
+        "salary": "$1,937,520",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/26993.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Semi Ojeleye",
+        "salary": "$1,618,520",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/23632.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Brad Wanamaker",
+        "salary": "$1,445,697",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/27289.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2020",
+        "trade_clause": true
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Carsen Edwards",
+        "salary": "$1,228,026",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31592.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Javonte Green",
+        "salary": "$898,310",
+        "position": "Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/32409.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Tacko Fall",
+        "salary": "-",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/default-person.png",
+        "signed_using": "",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Tremont Waters",
+        "salary": "-",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/default-person.png",
+        "signed_using": "",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Guerschon Yabusele",
+        "salary": "",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20221.png",
+        "signed_using": "",
+        "final_year_of_contract": "",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Max Strus",
+        "salary": "",
+        "position": "Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/default-person.png",
+        "signed_using": "",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Demetrius Jackson",
+        "salary": "",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20251.png",
+        "signed_using": "Mini MLE",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Yante Maten",
+        "salary": "",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/27815.png",
+        "signed_using": "",
+        "final_year_of_contract": "",
+        "trade_clause": false
+      },
+      {
+        "team": "Boston Celtics",
+        "name": "Justin Bibbs",
+        "salary": "",
+        "position": "Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/28028.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
       }
           ]
 
-    # cleaned_players = JSON.parse(laker_players)
+  # begin
+  # agent = Mechanize.new
+  # all_response_code = ['403', '404', '502']
+  # page = agent.get("https://www.spotrac.com/search/results/washington-wiz/")
+  # team_pages = page.links_with(:dom_class => "team-name")
+  # teams = team_pages.map do |link|
+  #     puts "Team done"
+  #     team_name = link.text
+  #     team_page = link.click
+  #     # total_cap = team_page.search(".datatable.captotal.xs-visible .tbody").text
+  #     # puts total_cap
+  # #   team_name = team_pages.map do |link|
+  # #      team_name = link.text
+  # #     end
+  #     team_logo = team_pages.map do |link|
+  #         team_logo = link.click.search('.team-logo img').attr('src')
+  #     end
+  # team_details = team_pages.each_with_index.map do |t, index|
+  #     {name: team_name, cap_spent: " ", logo: team_logo[index]}
+  # end
+  
+  # other_players = team_page.links_with(:dom_class => ".tag.player-tag")
+  # all_players = team_page.links_with(:href => %r{/redirect/player/})
+  # players = all_players.reject{|link| other_players.include? link}
+  # player_names = players.map do |link| 
+  #     player = link.text.strip
+  # end
+  
+  # salaries = players.map do |link| 
+  #     salary = link.click.search(".center.salaryAmt.result.current-year").text.gsub(/\s+/, "")
+  # end
+  # final_year_of_current = players.map do |link|
+  #     final_year = link.click.search('.salaryTable.salaryInfo.hidden-xs .notop .contract-item[5] .playerValue').text
+  #     final_year_of_current = final_year.gsub(/[^\d]/, '')
+  #     final_year_of_current.slice(0, 4)
+  # end
+
+  # position = players.map do |link|
+  #     position = link.click.search(".player .player-details .player-info .player-item.position").text
+  # end
+  # player_pic = players.map do |link|
+  #     player_pic = link.click.search('.player .player-logo img').attr('src')
+  # end
+  # signed_current_using = players.map do |link|
+  #     puts "signed"
+  #     signed_using = link.click.search('.salaryTable.salaryInfo.hidden-xs .notop .contract-item[4] .playerValue').first
+  #     if signed_using == nil
+  #     else
+  #     signed_using.text
+  #     end
+  # end
+
+  # trade_clause = players.map do |link|
+  #     trade_clause = link.click.search('.center.small.current-year .info i')
+  #     puts trade_clause
+  #     if trade_clause.to_s == '<i class="fa fa-unlock"></i>'
+  #         true
+  #     else
+  #         false
+  #     end
+  # end
+
+  # players_details = player_names.each_with_index.map do |w, index|
+  #     {team: team_name, name: player_names[index], salary: salaries[index], position: position[index], player_image: player_pic[index], signed_using: signed_current_using[index], final_year_of_contract: final_year_of_current[index], trade_clause: trade_clause[index]}
+  # end
+      
+      
+  
+  #     {   team: team_details ,
+  #     players: players_details.inject({}) do |r, h| 
+  #         (r[h[:name]] ||= {}).merge!(h){ |key, old, new| old || new }
+  #         r
+  #       end.values
+  #         }
+  #     rescue Mechanize::ResponseCodeError => e
+  #     if all_response_code.include? e.response_code 
+  #     e.skip
+  #     else
+  #     retry
+  #     end
+  #     end
+  # end
+
+  #   lakers_players = JSON.pretty_generate(teams)
+  #   puts JSON.pretty_generate(teams)
+
+  #   teams1 = teams[0]
 
     not_players = laker_players.select do |player| 
         player[:salary] == ""
