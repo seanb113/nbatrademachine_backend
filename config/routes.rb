@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :teams
   resources :trades
   resources :users
+  resources :votes
   post '/login', to: 'auth#create'
   get 'trades/index'
   # get 'auth/create'
