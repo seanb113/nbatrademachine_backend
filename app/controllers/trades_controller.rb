@@ -25,6 +25,11 @@ class TradesController < ApplicationController
       # render json: swap
     end
   end
+
+  def destroy
+    trade = Trade.find_by(id: params[:id])
+    trade.destroy
+  end
     # trade[0].each do |swapped|
     #   Swap.create(trade_id: trade.id, team_id swapped[0].id, player_id swapped[1].first)
     # end

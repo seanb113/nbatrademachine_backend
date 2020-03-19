@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :votes
   post '/login', to: 'auth#create'
   get 'trades/index'
+  delete '/trades/:id', to: 'trades#destroy'
   # get 'auth/create'
   # get 'swaps/create'
   # get 'votes/index'

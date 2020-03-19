@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_13_223621) do
+ActiveRecord::Schema.define(version: 2020_03_19_155250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,6 @@ ActiveRecord::Schema.define(version: 2020_03_13_223621) do
   add_foreign_key "swaps", "teams", on_delete: :cascade
   add_foreign_key "swaps", "trades", on_delete: :cascade
   add_foreign_key "trades", "users", on_delete: :cascade
-  add_foreign_key "votes", "trades"
+  add_foreign_key "votes", "trades", on_delete: :cascade
   add_foreign_key "votes", "users"
 end
