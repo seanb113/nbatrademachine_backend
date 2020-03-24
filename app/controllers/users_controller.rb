@@ -6,8 +6,10 @@ class UsersController < ApplicationController
     )
   end
 
-  def create
-  end
+  def create 
+    user = User.create(name: params["name"], team: params["team"], password:params["password"])
+    render json: user
+  end 
 
   def show
   end

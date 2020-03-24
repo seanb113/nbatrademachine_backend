@@ -1873,8 +1873,550 @@ laker_players =
         "signed_using": "Minimum",
         "final_year_of_contract": "2020",
         "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Chris Paul",
+        "salary": "$38,506,482",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/2609.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Steven Adams",
+        "salary": "$25,842,697",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/13325.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Danilo Gallinari",
+        "salary": "$22,615,559",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/6138.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Dennis Schröder",
+        "salary": "$15,500,000",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/13330.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Andre Roberson",
+        "salary": "$10,740,740",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/13339.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Shai Gilgeous-Alexander",
+        "salary": "$3,952,920",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/26977.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Terrance Ferguson",
+        "salary": "$2,475,840",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/23616.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Darius Bazley",
+        "salary": "$2,284,800",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31581.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Mike Muscala",
+        "salary": "$2,028,594",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/13357.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Nerlens Noel",
+        "salary": "$1,620,564",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/13319.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2020",
+        "trade_clause": true
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Abdel Nader",
+        "salary": "$1,618,520",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20264.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Isaiah Roby",
+        "salary": "$1,500,000",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31604.png",
+        "signed_using": "MLE",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Deonte Burton",
+        "salary": "$1,416,852",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/28767.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Hamidou Diallo",
+        "salary": "$1,416,852",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/27011.png",
+        "signed_using": "Mini MLE",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Luguentz Dort",
+        "salary": "-",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/33033.png",
+        "signed_using": "",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Kevin Hervey",
+        "salary": "-",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/27023.png",
+        "signed_using": "",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Kyle Singler",
+        "salary": "",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/8085.png",
+        "signed_using": "",
+        "final_year_of_contract": "",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Patrick Patterson",
+        "salary": "$1,620,564",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/6896.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Norris Cole",
+        "salary": "",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/8079.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2017",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Nick Collison",
+        "salary": "",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/2715.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2018",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Raymond Felton",
+        "salary": "",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/2229.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2019",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Justin Patton",
+        "salary": "",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/23611.png",
+        "signed_using": "Mini MLE",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Oklahoma City Thunder",
+        "name": "Devon Hall",
+        "salary": "-",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/27019.png",
+        "signed_using": "",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+
+      {
+        "team": "Miami Heat",
+        "name": "Jimmy Butler",
+        "salary": "$32,742,000",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/8081.png",
+        "signed_using": "Sign And Trade",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Goran Dragic",
+        "salary": "$19,217,900",
+        "position": "Point Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/6146.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Andre Iguodala",
+        "salary": "$17,185,185",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/2652.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Solomon Hill",
+        "salary": "$12,758,781",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/13336.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Kelly Olynyk",
+        "salary": "$12,667,886",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/13326.png",
+        "signed_using": "Cap Space",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Meyers Leonard",
+        "salary": "$11,286,517",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/10819.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Jae Crowder",
+        "salary": "$7,815,533",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/10859.png",
+        "signed_using": "Bird",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Tyler Herro",
+        "salary": "$3,640,200",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31570.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Edrice Adebayo",
+        "salary": "$3,454,080",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/23609.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Derrick Jones Jr.",
+        "salary": "$1,645,357",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/21067.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Udonis Haslem",
+        "salary": "$1,620,564",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/2549.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2020",
+        "trade_clause": true
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Kendrick Nunn",
+        "salary": "$1,416,852",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/28041.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Duncan Robinson",
+        "salary": "$1,416,852",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/27658.png",
+        "signed_using": "MLE",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "KZ Okpala",
+        "salary": "$898,310",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31591.png",
+        "signed_using": "MLE",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Chris Silva",
+        "salary": "$466,918",
+        "position": "Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/32319.png",
+        "signed_using": "MLE",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Kyle Alexander",
+        "salary": "-",
+        "position": "Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/default-person.png",
+        "signed_using": "",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Gabe Vincent",
+        "salary": "-",
+        "position": "Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/28087.png",
+        "signed_using": "",
+        "final_year_of_contract": "2020",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Ryan Anderson",
+        "salary": "",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/6133.png",
+        "signed_using": "",
+        "final_year_of_contract": "",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "A.J. Hammons",
+        "salary": "",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20252.png",
+        "signed_using": "",
+        "final_year_of_contract": "",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Yante Maten",
+        "salary": "",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/27815.png",
+        "signed_using": "",
+        "final_year_of_contract": "",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Luke Babbitt",
+        "salary": "",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/6898.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2018",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Jordan Mickey",
+        "salary": "",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/17861.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2019",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Dwyane Wade",
+        "salary": "",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/2556.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2019",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Kendrick Nunn",
+        "salary": "$1,416,852",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/28041.png",
+        "signed_using": "Minimum",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Duncan Robinson",
+        "salary": "$1,416,852",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/27658.png",
+        "signed_using": "MLE",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Tyler Herro",
+        "salary": "$3,640,200",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31570.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Duncan Robinson",
+        "salary": "$1,416,852",
+        "position": "Power Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/27658.png",
+        "signed_using": "MLE",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Edrice Adebayo",
+        "salary": "$3,454,080",
+        "position": "Center",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/23609.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2021",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Tyler Herro",
+        "salary": "$3,640,200",
+        "position": "Shooting Guard",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31570.png",
+        "signed_using": "Rookie",
+        "final_year_of_contract": "2023",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "Chris Silva",
+        "salary": "$466,918",
+        "position": "Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/32319.png",
+        "signed_using": "MLE",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
+      },
+      {
+        "team": "Miami Heat",
+        "name": "KZ Okpala",
+        "salary": "$898,310",
+        "position": "Small Forward",
+        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31591.png",
+        "signed_using": "MLE",
+        "final_year_of_contract": "2022",
+        "trade_clause": false
       }
-          ]
+ 
+    ]
 
   # begin
   # agent = Mechanize.new
@@ -1986,6 +2528,7 @@ laker_players =
     end
 
     user = User.create(name: "sean", team: "Detroit Pistons", password: "123")
+    user1 = User.create(name: "test", team: "Boston Celtics", password: "123")
     # trade1 = Trade.create(user: user)
     # swap1 = Swap.create(player: Player.all[45], trade: trade1, team: Team.all[8])
     # swap2 = Swap.create(player: Player.all[4], trade: trade1, team: Team.all[13])
