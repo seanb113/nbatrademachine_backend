@@ -6,7 +6,7 @@ require 'json'
 begin
     agent = Mechanize.new
     all_response_code = ['403', '404', '502']
-    page = agent.get("https://www.spotrac.com/search/results/atlanta-hawks/")
+    page = agent.get("https://www.spotrac.com/search/results/nba/")
     team_pages = page.links_with(:dom_class => "team-name")
     teams = team_pages.map do |link|
         puts "Team done"
