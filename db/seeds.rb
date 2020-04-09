@@ -8,8 +8,7 @@ Team.destroy_all
 Player.destroy_all
 # Swap.destroy_all
 # User.destroy_all
-# User.destroy_all
-# Trade.destroy_all
+Trade.destroy_all
 team_array = [
     {
       "name": "Atlanta Hawks",
