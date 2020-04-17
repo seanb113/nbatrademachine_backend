@@ -8,7 +8,7 @@ Team.destroy_all
 Player.destroy_all
 # Swap.destroy_all
 # User.destroy_all
-Trade.destroy_all
+# Trade.destroy_all
 team_array = [
     {
       "name": "Atlanta Hawks",
@@ -919,7 +919,7 @@ laker_players =
         "position": "Point Guard",
         "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20212.png",
         "signed_using": "Rookie",
-        "final_year_of_contract": "2002",
+        "final_year_of_contract": "2020",
         "trade_clause": false
       },
       {
@@ -1149,7 +1149,7 @@ laker_players =
         "position": "Center",
         "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/2248.png",
         "signed_using": "Minimum",
-        "final_year_of_contract": "0",
+        "final_year_of_contract": "2020",
         "trade_clause": false
       },
       {
@@ -2029,7 +2029,7 @@ laker_players =
         "position": "Shooting Guard",
         "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20279.png",
         "signed_using": "Minimum",
-        "final_year_of_contract": "0",
+        "final_year_of_contract": "2020",
         "trade_clause": false
       },
       {
@@ -2829,7 +2829,7 @@ laker_players =
         "position": "Power Forward",
         "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/2208.png",
         "signed_using": "Minimum",
-        "final_year_of_contract": "0",
+        "final_year_of_contract": "2020",
         "trade_clause": false
       },
       {
@@ -3899,7 +3899,7 @@ laker_players =
         "position": "Shooting Guard",
         "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20225.png",
         "signed_using": "Rookie",
-        "final_year_of_contract": "0",
+        "final_year_of_contract": "2020",
         "trade_clause": false
       },
       {
@@ -3950,16 +3950,6 @@ laker_players =
         "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/31590.png",
         "signed_using": "Cap Space",
         "final_year_of_contract": "2022",
-        "trade_clause": false
-      },
-      {
-        "team": "Brooklyn Nets",
-        "name": "Timothe Luwawu-Cabarrot",
-        "salary": "$654,468",
-        "position": "Shooting Guard",
-        "player_image": "https://d1dglpr230r57l.cloudfront.net/headshots/nba/20229.png",
-        "signed_using": "Minimum",
-        "final_year_of_contract": "2021",
         "trade_clause": false
       },
       {
