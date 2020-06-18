@@ -1,8 +1,3 @@
-require 'byebug'
-require 'date'
-require 'json'
-# require 'pry'
-require 'mechanize'
 require 'json'
 Team.destroy_all
 Player.destroy_all
