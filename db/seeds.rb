@@ -5299,6 +5299,3 @@ laker_players =
 
     # user = User.create(name: "sean", team: "Detroit Pistons", password: "123")
     # user1 = User.create(name: "test", team: "Boston Celtics", password: "123")
-    # trade1 = Trade.create(user: user)
-    # swap1 = Swap.create(player: Player.all[45], trade: trade1, team: Team.all[8])
-    # swap2 = Swap.create(player: Player.all[4], trade: trade1, team: Team.all[13])
