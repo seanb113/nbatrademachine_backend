@@ -5274,8 +5274,6 @@ laker_players =
   #   lakers_players = JSON.pretty_generate(teams)
   #   puts JSON.pretty_generate(teams)
 
-  #   teams1 = teams[0]
-
     not_players = laker_players.select do |player| 
         player[:salary] == ""
     end
