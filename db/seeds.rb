@@ -1,8 +1,3 @@
-require 'byebug'
-require 'date'
-require 'json'
-# require 'pry'
-require 'mechanize'
 require 'json'
 Team.destroy_all
 Player.destroy_all
@@ -5279,8 +5274,6 @@ laker_players =
   #   lakers_players = JSON.pretty_generate(teams)
   #   puts JSON.pretty_generate(teams)
 
-  #   teams1 = teams[0]
-
     not_players = laker_players.select do |player| 
         player[:salary] == ""
     end
@@ -5302,8 +5295,5 @@ laker_players =
         Player.create(name: name, team: team_id, salary: salary, position: position, player_image: player_image, signed_using: signed_using, final_year_of_contract: final_year_of_contract, trade_clause: trade_clause)
     end
 
-    user = User.create(name: "sean", team: "Detroit Pistons", password: "123")
-    user1 = User.create(name: "test", team: "Boston Celtics", password: "123")
-    # trade1 = Trade.create(user: user)
-    # swap1 = Swap.create(player: Player.all[45], trade: trade1, team: Team.all[8])
-    # swap2 = Swap.create(player: Player.all[4], trade: trade1, team: Team.all[13])
+    # user = User.create(name: "sean", team: "Detroit Pistons", password: "123")
+    # user1 = User.create(name: "test", team: "Boston Celtics", password: "123")
