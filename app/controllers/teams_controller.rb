@@ -4,8 +4,8 @@ class TeamsController < ApplicationController
     render json: all_teams.to_json(
     {:except => [:created_at, :updated_at]}
     )
-
   end
+  
   def create 
   end
 end
